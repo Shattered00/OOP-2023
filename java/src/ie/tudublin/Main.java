@@ -8,15 +8,16 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new HelloProcessing());
     }
+
+	public static void forexercise()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new forexersice());
+    }
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
-		
-		Dog penny = new Dog();
-		penny.setName("Penny");
-		penny.speak();
-		helloProcessing();
+		forexercise();
 	}
 	
 }
