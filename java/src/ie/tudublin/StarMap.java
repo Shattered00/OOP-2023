@@ -38,22 +38,35 @@ public class StarMap extends PApplet
 		stroke(69,255,255);
 		float border = 50.0f;
 		
-		int count = 10;
-		float gap = (width - (border * 2.0f)) / (float) count;
+		//int count = 10;
+		//float gap = (width - (border * 2.0f)) / (float) count;
 		for(int i = -5 ; i <= 5 ; i ++)
 		{
-			float x = border + (gap * (i + 5));
+			float x = map(i, -5, 5 , border, width - border);
+			//float x = border + (gap * (i + 5));
 			line(x, border, x, height - border);
 			line(border, x, width - border, x);
 			fill(69,255,255);
-			text(i , x - 5, border -10  );
-			text(i , border-17 , x + 5 );
+			//text(i , x - 5, border -10  );
+			//text(i , border-17 , x + 5 );
+
+			textAlign(CENTER , CENTER);
+			text(i, x, border * 0.5f);
+
+			text(i, border *  0.5f , x );
 		}
 		
 	}
 
-	
-		
+		float f = map1(5, 0, 10, 100, 200);
+		float map1(float a, float b, float c, float d, float e)
+		{
+			float r1= c - b;
+			float r2 = e- d;
+			
+			float howFar = a - b;
+			return d + ((howFar / r1) * r2);
+		}
 	
 
 	ArrayList<Star> stars = new ArrayList<Star>();// Array List basically malloc and realloc(loadStars)
@@ -75,6 +88,10 @@ public class StarMap extends PApplet
 			stroke(255,255,255);
 			noFill();
 			circle(x, y, s.absMag);
+			
+			stroke(200,255,255);
+			line(x-5, y, x+5 , y);
+			line(x, y-5, x, y+5);
 
 		}
 	}
