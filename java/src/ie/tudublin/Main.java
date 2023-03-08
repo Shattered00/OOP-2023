@@ -3,20 +3,17 @@ package ie.tudublin;
 public class Main
 {
 
-	public static void helloProcessing()
+
+	public static void life()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new HelloProcessing());
+        processing.core.PApplet.runSketch( a, new Life());
     }
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
 		
-		Dog penny = new Dog();
-		penny.setName("Penny");
-		penny.speak();
-		helloProcessing();
+		life();
 	}
 	
 }
