@@ -1,18 +1,20 @@
 package ie.tudublin;
 
-public class Main
+import processing.core.PApplet;
+
+public class Main 
 {
 
-	public static void ForestWithCampfire()
+	public static void forestCampfire()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new ForestWithCampfire());
+        processing.core.PApplet.runSketch(a, forestCampfire());
     }
 	
 	public static void main(String[] args)
 	{
 		
-		ForestWithCampfire();
+		forestCampfire();
 	}
 	
 }

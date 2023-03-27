@@ -55,6 +55,6 @@ public class Ship {
 
     public void setup()
     {
-        ship= new Ship(width / 2, height / 2, 50, 70, this);
+        //ship= new Ship(width / 2, height / 2, 50, 70, this);
     }
 }

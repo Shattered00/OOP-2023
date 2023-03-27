@@ -36,15 +36,15 @@ public class Lifeboard {
     
     public void render()
     {
-        float w = p.width/size;
-        float h = p.height/ size;
+      //  float w = p.width/size;
+        //float h = p.height/ size;
         
         for(int row = 0; row < size; row++)
         {
             for(int col = 0; col < size; col++)
             {
-              float x = col * w;
-              float y = row * w;
+              //float x = col * w;
+              //float y = row * w;
 
               if(board[row][col])
               {
@@ -55,7 +55,7 @@ public class Lifeboard {
                 p.fill(0);
               }
             }
-            p.rect(x.y, )
+            //p.rect(x.y, )
         }
     }
 }
