@@ -9,19 +9,35 @@ public class ForestCampfire extends PApplet
 
     public void settings()
     {
-        size(1300, 700);
+        size(displayWidth, displayHeight);
     }
 
     public void setup()
     {
-        camp = loadImage("mouse.jpg");
-        
+        camp = loadImage("forestcampfire.jpg");
+        background(0);
     }
 
     public void draw()
     {
-        background(0);
-        image(camp, 0, 0);
+        //image(camp, 0, 0, displayWidth, displayHeight);
+        for(int i = 0; i < 6000 ; i++)
+        {
+            int x = (int)random(width);
+            int y = (int)random(height);
+            int c = camp.get(x,y);
+            float z = random(5, 30);
+            fill(c);
+            noStroke();
+        
+            ellipse(x, y, z, z);
+            if (i == 0)
+            {
+              background(0);
+            }
+            
+        }
+        
     }
 }
 
