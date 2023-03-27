@@ -5,17 +5,21 @@ import processing.core.PImage;
 
 public class ForestCampfire extends PApplet 
 {
-    PImage img;
-    public void setup()
-    {
-        size(1000, 600);
-        img = loadImage("forestcampfire.jpg");
-    }
+    PImage camp;
 
+    public void settings()
+    {
+     
+        size(1300, 700);
+        
+        
+    }
+    
     public void draw()
     {
         background(0);
-        image(img, 0 , 0);
+        camp = loadImage("mouse.jpg");
+        image(camp, 0 , 0);
     }
 }
 
