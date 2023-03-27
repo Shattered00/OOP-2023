@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Flame3D",
+            "request": "launch",
+            "mainClass": "ie.tudublin.Flame3D",
+            "projectName": "java"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "ie.tudublin.Main",
