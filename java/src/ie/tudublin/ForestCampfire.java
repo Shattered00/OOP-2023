@@ -9,17 +9,19 @@ public class ForestCampfire extends PApplet
 
     public void settings()
     {
-     
         size(1300, 700);
-        
+    }
+
+    public void setup()
+    {
+        camp = loadImage("mouse.jpg");
         
     }
-    
+
     public void draw()
     {
         background(0);
-        camp = loadImage("mouse.jpg");
-        image(camp, 0 , 0);
+        image(camp, 0, 0);
     }
 }
 
