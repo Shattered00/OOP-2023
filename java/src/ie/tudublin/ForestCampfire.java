@@ -23,8 +23,8 @@ public class ForestCampfire extends PApplet
         //image(camp, 0, 0, displayWidth, displayHeight);
         for(int i = 0; i < 6000 ; i++)
         {
-            int x = (int)random(width);
-            int y = (int)random(height);
+            int x = (int)random(displayWidth);
+            int y = (int)random(displayHeight);
             int c = camp.get(x,y);
             float z = random(5, 30);
             fill(c);
