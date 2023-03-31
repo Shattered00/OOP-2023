@@ -48,6 +48,10 @@ public class Ship {
     private int c;
     private float size;
     private float halfSize;
+    
+    int fireRate = 5;
+    int toPass = 1000;
+    int elapsed = 1000/ fireRate;
 
     public void move()
     {
@@ -56,6 +60,7 @@ public class Ship {
 
         YASC yasc= ((YASC)p);
         
+    
         if (yasc.keys[PApplet.LEFT])
         {
             rot -= 0.1f;
@@ -87,7 +92,15 @@ public class Ship {
 
             ((YASC)p).bullets.add(b);
         }
+        int now = p.millis();
+        timeDelta = now - last;
+        elapsed +=timeDelta;
+        last = now;
     }
+    int last = 0;
+    int timeDelta = 0;
+    
+
 
     public void render()
     {

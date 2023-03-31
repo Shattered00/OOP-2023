@@ -53,7 +53,7 @@ public class YASC extends PApplet
 
 		s += " & 200AD";
 
-		String s1 = s.substring(2, 6);
+		//String s1 = s.substring(2, 6);
 
 		println(s.substring(7, 11));
 
