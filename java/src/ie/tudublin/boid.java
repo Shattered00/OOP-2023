@@ -46,9 +46,9 @@ class Boid {
       PVector ali = align(boids);      // Alignment
       PVector coh = cohesion(boids);   // Cohesion
       // Arbitrarily weight these forces
-      sep.mult(1.5f);
-      ali.mult(1.0f);
-      coh.mult(1.0f);
+      sep.mult(2.5f);
+      ali.mult(0.5f);
+      coh.mult(0.5f);
       // Add the force vectors to acceleration
       applyForce(sep);
       applyForce(ali);
@@ -85,21 +85,21 @@ class Boid {
     }
   
     void render() {
-      // Draw a triangle rotated in the direction of velocity
+      // Draws the shape rotated in the direction of velocity
       float theta = velocity.heading() + PApplet.radians(90);
   
       
-      p.fill(200);
-      p.stroke(255);
+      p.fill(0,255,0);
+      p.noStroke();
       p.pushMatrix();
       p.translate(position.x, position.y);
       p.rotate(theta);
       p.ellipse(theta,theta,20,20);
       //p.beginShape(PApplet.TRIANGLES);
-      //p.vertex(0, -r*2);
-      //p.vertex(-r, r*2);
-      //p.vertex(r, r*2);
-      //p.endShape();
+      p.vertex(0, -r*2);
+      p.vertex(-r, r*2);
+      p.vertex(r, r*2);
+      p.endShape();
       p.popMatrix();
     }
   

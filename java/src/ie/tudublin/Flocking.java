@@ -16,7 +16,7 @@ public class Flocking extends PApplet
    
    flock = new Flock();
    // Add an initial set of boids into the system
-   for (int i = 0; i < 50; i++)
+   for (int i = 0; i < 20; i++)
     {
      flock.addBoid(new Boid(this, width,height));
     }
