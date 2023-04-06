@@ -41,11 +41,7 @@ public class ForestCampfire extends PApplet
             
         }
         */
-        Boid B;
-
-        B = new Boid();
-        
-        B.draw();
+       
            
     }
 }
