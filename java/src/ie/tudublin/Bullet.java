@@ -3,17 +3,13 @@ package ie.tudublin;
 import processing.core.PApplet;
 import processing.core.PVector;
 
-public class Bullet {
-    PVector pos;
-    float rot;
-    float speed;
-    PVector forward;
-    PApplet p;
-    int c;
-
+public class Bullet extends GameObject {
+    
     int timeToLive = 5000;
     int creationTime = 0; 
     
+
+    private float speed;
 
     public Bullet(float x, float y, float rot, int c, PApplet p)
     {
