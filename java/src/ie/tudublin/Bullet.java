@@ -14,13 +14,13 @@ public class Bullet extends GameObject {
     public Bullet(float x, float y, float rot, int c, PApplet p)
     {
         super(x, y, rot, c, p);
-        
+
         speed = 5;
         creationTime = p.millis();
 
     }
 
-    void render()
+    public void render()
     {
         p.pushMatrix();
         p.stroke(c, 255, 255);
@@ -30,7 +30,7 @@ public class Bullet extends GameObject {
         p.popMatrix();
     }
 
-    void move()
+    public void update()
     {
         forward.x = PApplet.sin(rot);
         forward.y = - PApplet.cos(rot);
@@ -63,7 +63,7 @@ public class Bullet extends GameObject {
         int now = p.millis();
         if (now - creationTime > timeToLive)
         {
-            ((YASC)p).bullets.remove(this);
+            ((YASC)p).gameObjects.remove(this);
         }
 
     }
